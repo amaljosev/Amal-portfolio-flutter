@@ -38,7 +38,7 @@ class MyDrawerWidget extends StatelessWidget {
             ),
           ),
           Flexible(
-              child: Column(
+              child: ListView(
             children: List.generate(
                 homeCtrl.menu.length,
                 (index) => Padding(
@@ -53,14 +53,12 @@ class MyDrawerWidget extends StatelessWidget {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10))),
                         onTap: () {
-                          
-                            homeCtrl.scrollToSection(
-                              index: index,
-                              scrollController: controller,
-                              pixel: size.width * myPlatformHeight[index],
-                            );
-                            Get.back();
-                          
+                          homeCtrl.scrollToSection(
+                            index: index,
+                            scrollController: controller,
+                            pixel: size.width * myPlatformHeight[index],
+                          );
+                          Get.back();
                         },
                       ),
                     )),

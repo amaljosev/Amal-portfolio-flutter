@@ -80,28 +80,27 @@ class ProjectsWidget extends StatelessWidget {
                     Positioned.fill(
                       child: GestureDetector(
                         onTap: !isMobile
-                            ? () {}
+                            ? () => homeCtrl.openExternalWeb(project.link)
                             : () => showAdaptiveDialog(
-                                    context: context,
-                                    builder: (context) => MobileAppsWidget(
-                                        size: size,
-                                        project: app,
-                                        popupAppIconPadding:
-                                            popupAppIconPadding,
-                                        popupAppTitleFontSize:
-                                            popupAppTitleFontSize,
-                                        popupIconHeight: popupIconHeight,
-                                        popupIconWidth: popupIconWidth,
-                                        popupMainHorizontalPadding:
-                                            popupMainHorizontalPadding,
-                                        popupMainVerticalPadding:
-                                            popupMainVerticalPadding,
-                                        popupTemplateHorizontalPadding:
-                                            popupTemplateHorizontalPadding,
-                                        popupTemplateVerticalPadding:
-                                            popupTemplateVerticalPadding,
-                                        popupTemplatewidth: popupTemplatewidth,
-                                        downloadOnTap: () => downloadOnTap)),
+                                context: context,
+                                builder: (context) => MobileAppsWidget(
+                                    size: size,
+                                    project: app,
+                                    popupAppIconPadding: popupAppIconPadding,
+                                    popupAppTitleFontSize:
+                                        popupAppTitleFontSize,
+                                    popupIconHeight: popupIconHeight,
+                                    popupIconWidth: popupIconWidth,
+                                    popupMainHorizontalPadding:
+                                        popupMainHorizontalPadding,
+                                    popupMainVerticalPadding:
+                                        popupMainVerticalPadding,
+                                    popupTemplateHorizontalPadding:
+                                        popupTemplateHorizontalPadding,
+                                    popupTemplateVerticalPadding:
+                                        popupTemplateVerticalPadding,
+                                    popupTemplatewidth: popupTemplatewidth,
+                                    downloadOnTap: () => downloadOnTap)),
                         child: AnimatedContainer(
                           duration: const Duration(milliseconds: 500),
                           decoration: BoxDecoration(

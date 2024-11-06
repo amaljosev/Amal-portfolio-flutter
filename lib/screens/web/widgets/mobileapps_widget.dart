@@ -84,7 +84,7 @@ class _MobileAppsWidgetState extends State<MobileAppsWidget> {
                     Appconstants.smallheight,
                     MyElevationButton(
                       title: 'Download',
-                      onPressed: widget.downloadOnTap,
+                      onPressed: ()=>homeCtrl.openExternalWeb(widget.project.link),
                     )
                   ],
                 ),

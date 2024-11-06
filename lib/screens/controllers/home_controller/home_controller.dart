@@ -189,7 +189,8 @@ class HomeController extends GetxController {
           'assets/images/projects/6.png',
           'assets/images/projects/7.png',
           'assets/images/projects/8.png',
-        ]),
+        ],
+        link: 'https://www.amazon.com/dp/B0D383VPMK/ref=apps_sf_sta'),
     ProjectsAppsModel(
         title: 'Edu Plan',
         icon: 'assets/images/projects/appIcon.png',
@@ -209,7 +210,8 @@ class HomeController extends GetxController {
           'assets/images/projects/e9.png',
           'assets/images/projects/e10.png',
           'assets/images/projects/e11.png',
-        ]),
+        ],
+        link: 'https://www.amazon.com/gp/product/B0CP4GCR1B'),
     ProjectsAppsModel(
         title: 'Netflix',
         icon: 'assets/images/projects/N.png',
@@ -219,31 +221,43 @@ class HomeController extends GetxController {
           'assets/images/projects/n3.png',
           'assets/images/projects/n4.png',
           'assets/images/projects/n5.png',
-        ]),
+        ],
+        link: 'https://github.com/amaljosev/Netflix_clone'),
   ];
   List<ProjectsModel> mobApps = [
     ProjectsModel(
+        link: 'https://www.amazon.com/dp/B0D383VPMK/ref=apps_sf_sta',
         title: 'HabitsOn',
         template: 'assets/images/projects/habitson_template.png'),
     ProjectsModel(
-        title: 'Edu Plan', template: 'assets/images/projects/secondapp.png'),
+        link: 'https://www.amazon.com/gp/product/B0CP4GCR1B',
+        title: 'Edu Plan',
+        template: 'assets/images/projects/secondapp.png'),
     ProjectsModel(
+        link: 'https://github.com/amaljosev/Netflix_clone',
         title: 'Netflix',
         template: 'assets/images/projects/netflix-tambanil.png'),
   ];
   List<ProjectsModel> webApps = [
     ProjectsModel(
+        link: 'https://github.com/amaljosev/Amal-portfolio-flutter',
         title: 'My Portfolio',
-        template: 'assets/images/projects/habitson_template.png'),
+        template: 'assets/images/projects/personal_portfolio_template.png'),
     ProjectsModel(
+        link: 'https://github.com/amaljosev/Netflix_clone',
         title: 'Netflix',
         template: 'assets/images/projects/netflix-tambanil.png'),
   ];
   List<ProjectsModel> desktopApps = [
     ProjectsModel(
+        link: 'https://github.com/amaljosev/Amal-portfolio-flutter',
         title: 'My Portfolio',
-        template: 'assets/images/projects/habitson_template.png'),
+        template: 'assets/images/projects/personal_portfolio_template.png'),
   ];
+  Future<void> openExternalWeb(String url) async {
+    final uri = Uri.parse(url);
+    await launchUrl(uri, mode: LaunchMode.externalApplication);
+  }
 
   Future<void> openMail() async {
     await launchUrl(Uri.parse('mailto:amaljvattakkunnel@gmail.com'));

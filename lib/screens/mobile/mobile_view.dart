@@ -217,15 +217,15 @@ double checkScreenSize(Size size) {
     }
   } else if (size.width >= 375) {
     if (size.height >= 600) {
-      return 3;
+      return 3.5;
     } else {
       return 10;
     }
   } else if (size.width >= 200) {
     if (size.height >= 600) {
-      return 2.8;
+      return 3.3;
     } else {
-      return 4;
+      return 4.5;
     }
   } else {
     if (size.height >= 600) {
